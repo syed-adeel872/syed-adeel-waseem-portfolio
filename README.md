@@ -1,0 +1,53 @@
+# Syed Adeel Waseem — Portfolio
+
+Agentic AI Developer | AI Automation & RAG
+
+## Overview
+
+This is my professional portfolio website showcasing my work as an Agentic AI Developer specializing in AI automation, RAG systems, and LLM-powered applications.
+
+**Live Portfolio:** https://adeel-portfolio-livid.vercel.app
+
+## Technology Stack
+
+- **HTML5** — Single-file static site (no build step)
+- **CSS3** — Custom properties, CSS Grid, Flexbox, responsive design
+- **Google Fonts** — Space Grotesk (display), DM Sans (body), JetBrains Mono (code)
+- **Vercel** — Hosting and deployment
+- **Zero JavaScript** — No client-side JS, no frameworks, no dependencies
+
+## Key Features
+
+- **Responsive Design** — Works on desktop (1440px+) and mobile (390px) viewports
+- **Light/Dark Theme Toggle** — Persisted preference via localStorage, no flash of wrong theme
+- **Project Case Studies** — Two live production systems with verified statistics
+- **Professional Experience** — Timeline with technical achievements
+- **Award Recognition** — 1st Place, AI Seerathon 2026 (AI Chatbot category)
+- **Security Hardened** — CSP headers, no external scripts, minimal attack surface
+
+## Links
+
+- **Portfolio:** https://adeel-portfolio-livid.vercel.app
+- **GitHub:** https://github.com/syed-adeel872
+- **LinkedIn:** https://www.linkedin.com/in/syedadeelwaseem/
+- **Seerah QA Bot (Live):** https://seerah-qa-bot.vercel.app
+- **HVAC Revenue Recovery (Live):** https://hvac-revenue-recovery-nine.vercel.app
+
+## Local Preview
+
+```bash
+# No build required — open index.html directly in a browser
+# Or serve with any static server:
+npx serve .
+# or
+python -m http.server 8000
+```
+
+## Featured Projects
+
+1. **Seerah QA Bot** — Multilingual RAG system for Islamic texts with BM25 + semantic search, Gemini embeddings, citation-backed answers, trilingual support (English/Urdu/Arabic)
+2. **HVAC Revenue Recovery** — AI-powered revenue recovery system with ServiceTitan integration, Twilio messaging, circuit breaker patterns, WORM audit trails, and HITL approval flows
+
+---
+
+*Built with semantic HTML, accessible CSS, and zero dependencies.*
