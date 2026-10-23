@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-const fs = require('fs');
 const path = require('path');
 
 (async () => {
@@ -9,13 +8,31 @@ const path = require('path');
   console.log(`Generating PDF from: ${url}`);
   console.log(`Output: ${outputPath}`);
 
-  const executablePath = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+  // Resolve Chrome executable: CHROME_PATH env > Puppeteer bundled > system default
+  let executablePath = process.env.CHROME_PATH || null;
+  if (!executablePath) {
+    try {
+      executablePath = puppeteer.executablePath();
+      if (executablePath) {
+        console.log(`Using Puppeteer bundled browser: ${executablePath}`);
+      }
+    } catch (e) {
+      console.warn('Puppeteer executablePath() failed:', e.message);
+    }
+  }
+  if (!executablePath) {
+    console.warn('No Chrome executable found; relying on Puppeteer default resolution');
+  }
 
-  const browser = await puppeteer.launch({
+  const launchOptions = {
     headless: 'new',
-    executablePath,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--disable-dev-shm-usage']
-  });
+  };
+  if (executablePath) {
+    launchOptions.executablePath = executablePath;
+  }
+
+  const browser = await puppeteer.launch(launchOptions);
 
   try {
     const page = await browser.newPage();

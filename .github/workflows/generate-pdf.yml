@@ -2,7 +2,7 @@ name: Generate PDF and Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Install Chrome for Puppeteer
+        run: npx puppeteer browsers install chrome
 
       - name: Generate PDF
         run: npm run generate-pdf
@@ -52,7 +55,7 @@ jobs:
           git commit -m "chore: regenerate portfolio PDF [skip ci]"
           git push
 
-      - name: Deploy to Vercel
+      - name: Deploy to Vercel (PDF changed)
         if: steps.pdf_check.outputs.changed == 'true'
         uses: amondnet/vercel-action@v25
         with:
