@@ -13,15 +13,17 @@ This is my professional portfolio website showcasing my work as an Agentic AI De
 - **HTML5** — Single-file static site (no build step)
 - **CSS3** — Custom properties, CSS Grid, Flexbox, responsive design
 - **Google Fonts** — Space Grotesk (display), DM Sans (body), JetBrains Mono (code)
+- **Vanilla JavaScript** — Lightweight theme toggle with localStorage persistence (theme.js)
 - **Vercel** — Hosting and deployment
-- **Zero JavaScript** — No client-side JS, no frameworks, no dependencies
+- **No frameworks** — No React, Vue, or build toolchain
 
 ## Key Features
 
 - **Responsive Design** — Works on desktop (1440px+) and mobile (390px) viewports
 - **Light/Dark Theme Toggle** — Persisted preference via localStorage, no flash of wrong theme
 - **Project Case Studies** — Two live production systems with verified statistics
-- **Professional Experience** — Timeline with technical achievements
+- **Education & Training** — Agentic AI Architecture program (Panaversity) in progress
+- **Professional Experience** — Lead generation and email outreach background
 - **Award Recognition** — 1st Place, AI Seerathon 2026 (AI Chatbot category)
 - **Security Hardened** — CSP headers, no external scripts, minimal attack surface
 
@@ -45,9 +47,9 @@ python -m http.server 8000
 
 ## Featured Projects
 
-1. **Seerah QA Bot** — Multilingual RAG system for Islamic texts with BM25 + semantic search, Gemini embeddings, citation-backed answers, trilingual support (English/Urdu/Arabic)
+1. **Seerah QA Bot** — Multilingual RAG system for Islamic texts with BM25 + semantic search, Gemini embeddings, citation-backed answers, trilingual support (English, Urdu, Roman Urdu)
 2. **HVAC Revenue Recovery** — AI-powered revenue recovery system with ServiceTitan integration, Twilio messaging, circuit breaker patterns, WORM audit trails, and HITL approval flows
 
 ---
 
-*Built with semantic HTML, accessible CSS, and zero dependencies.*
+*Built with semantic HTML, accessible CSS, and a minimal local theme script.*
