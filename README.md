@@ -8,6 +8,8 @@ This is my professional portfolio website showcasing my work as an Agentic AI De
 
 **Live Portfolio:** https://adeel-portfolio-livid.vercel.app
 
+**Download Full Portfolio (PDF):** [assets/syed-adeel-waseem-portfolio.pdf](assets/syed-adeel-waseem-portfolio.pdf) — generated from the live site, includes all sections and images.
+
 ## Technology Stack
 
 - **HTML5** — Single-file static site (no build step)
@@ -25,6 +27,7 @@ This is my professional portfolio website showcasing my work as an Agentic AI De
 - **Education & Training** — Agentic AI Architecture program (Panaversity) in progress
 - **Professional Experience** — Lead generation and email outreach background
 - **Award Recognition** — 1st Place, AI Seerathon 2026 (AI Chatbot category)
+- **Downloadable PDF** — Full portfolio available for offline viewing
 - **Security Hardened** — CSP headers, no external scripts, minimal attack surface
 
 ## Links
@@ -52,4 +55,4 @@ python -m http.server 8000
 
 ---
 
-*Built with semantic HTML, accessible CSS, and a minimal local theme script.*
+*Built with semantic HTML, accessible CSS, and a minimal local theme script. The PDF is generated from the live portfolio and should be regenerated whenever substantive content changes.*

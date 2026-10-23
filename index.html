@@ -221,6 +221,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
   .wrap{padding:0 22px}
   .contact-sep{padding:0 8px}
 }
+
+@media print{
+  html,body{background:#fff !important;color:#000 !important}
+  .topbar,.theme-toggle,.hero-cta .link-arrow,.award-ig,.plink,.contact-links a{display:none !important}
+  .hero{display:block;padding:0}
+  .hero-side{display:none}
+  .hero-main{width:100%}
+  .hero-award{page-break-inside:avoid}
+  .panel{break-inside:avoid;page-break-inside:avoid;background:#fff;border-color:#ccc}
+  .flow-step{break-inside:avoid;page-break-inside:avoid}
+  .sec{padding:24px 0}
+  a{color:#000;text-decoration:underline}
+  img{max-width:100% !important;height:auto}
+}
 </style>
 <script src="theme.js"></script>
 </head>
@@ -263,6 +277,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View projects</a>
             <a href="#contact" class="link-arrow">Get in touch →</a>
+            <a href="assets/syed-adeel-waseem-portfolio.pdf" class="btn" download>Download Full Portfolio (PDF)</a>
           </div>
         </div>
         <div class="hero-side">
