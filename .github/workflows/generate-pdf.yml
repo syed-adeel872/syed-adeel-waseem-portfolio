@@ -1,0 +1,75 @@
+name: Generate PDF and Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate PDF
+        run: npm run generate-pdf
+        env:
+          PDF_SOURCE_URL: file://${{ github.workspace }}/index.html
+
+      - name: Check if PDF changed
+        id: pdf_check
+        run: |
+          if git diff --quiet assets/syed-adeel-waseem-portfolio.pdf; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "PDF unchanged"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "PDF changed"
+          fi
+
+      - name: Commit and push PDF if changed
+        if: steps.pdf_check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/syed-adeel-waseem-portfolio.pdf
+          git commit -m "chore: regenerate portfolio PDF [skip ci]"
+          git push
+
+      - name: Deploy to Vercel
+        if: steps.pdf_check.outputs.changed == 'true'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel (no PDF change)
+        if: steps.pdf_check.outputs.changed == 'false'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

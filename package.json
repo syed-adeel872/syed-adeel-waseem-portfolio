@@ -1,0 +1,11 @@
+{
+  "name": "syed-adeel-waseem-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website with automatic PDF generation",
+  "scripts": {
+    "generate-pdf": "node scripts/generate-pdf.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}
