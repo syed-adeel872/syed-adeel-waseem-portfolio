@@ -1,0 +1,9 @@
+AUDIT_REPORT.md
+scripts/
+.github/
+node_modules/
+.vercel/
+.env*
+Seerah QA Bot_chat interface.image.png
+Seerah QA Bot_answer screen.image.png
+HVAC Revenue Recovery.image.png

@@ -4,15 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#EAE9E1">
-<title>Syed Adeel Waseem — Agentic AI Developer | AI Automation &amp; RAG</title>
-<meta name="description" content="Agentic AI developer in Islamabad, Pakistan. I build AI-powered applications and business workflows using LLMs, retrieval systems (RAG), and structured AI-assisted development.">
+<title>Syed Adeel Waseem — AI Automation Engineer | Agentic AI Developer</title>
+<meta name="description" content="AI Automation Engineer and Agentic AI Developer in Islamabad, Pakistan. I build AI systems that do real work — turning business workflows into practical AI applications and automations with LLMs, APIs, and structured testing.">
+<meta name="author" content="Syed Adeel Waseem">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Syed Adeel Waseem",
+  "jobTitle": "AI Automation Engineer",
+  "url": "https://adeel-portfolio-livid.vercel.app/",
+  "sameAs": [
+    "https://github.com/syed-adeel872",
+    "https://www.linkedin.com/in/syedadeelwaseem/"
+  ]
+}
+</script>
+<link rel="canonical" href="https://adeel-portfolio-livid.vercel.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Syed Adeel Waseem — Agentic AI Developer | AI Automation &amp; RAG">
-<meta property="og:description" content="Agentic AI developer in Islamabad, Pakistan. I build AI-powered applications and business workflows using LLMs, retrieval systems (RAG), and structured AI-assisted development.">
-<meta property="og:url" content="https://adeel-portfolio-livid.vercel.app">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Syed Adeel Waseem — Agentic AI Developer | AI Automation &amp; RAG">
-<meta name="twitter:description" content="Agentic AI developer in Islamabad, Pakistan. I build AI-powered applications and business workflows using LLMs, retrieval systems (RAG), and structured AI-assisted development.">
+<meta property="og:title" content="Syed Adeel Waseem — AI Automation Engineer | Agentic AI Developer">
+<meta property="og:description" content="AI Automation Engineer and Agentic AI Developer in Islamabad, Pakistan. I build AI systems that do real work.">
+<meta property="og:url" content="https://adeel-portfolio-livid.vercel.app/">
+<meta property="og:image" content="https://adeel-portfolio-livid.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Syed Adeel Waseem — AI Automation Engineer | Agentic AI Developer">
+<meta name="twitter:description" content="AI Automation Engineer and Agentic AI Developer in Islamabad, Pakistan. I build AI systems that do real work.">
+<meta name="twitter:image" content="https://adeel-portfolio-livid.vercel.app/assets/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C5138'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23F2F1EA' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,15 +80,27 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;width:100%}
 section{scroll-margin-top:72px}
+@media(max-width:759px){section{scroll-margin-top:138px}}
 
 /* ── TOP BAR ── */
 .topbar{position:sticky;top:0;z-index:10;background:var(--topbar-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 26px;padding-top:14px;padding-bottom:14px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 26px;padding-top:14px;padding-bottom:14px;position:relative}
 .topbar-name{font-family:var(--head);font-size:15px;font-weight:700;letter-spacing:-.01em}
+.topbar-actions{display:flex;align-items:center;gap:8px}
 .topbar-links{display:flex;gap:18px;flex-wrap:wrap}
 .topbar-links a{font-size:13px;font-weight:500;color:var(--ink3);transition:color .15s}
 .topbar-links a:hover{color:var(--accent)}
 @media(min-width:760px){.topbar-links{gap:26px}.topbar-links a{font-size:13.5px}}
+
+/* ── MENU TOGGLE ── */
+.menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--ink2);cursor:pointer}
+.menu-toggle svg{width:20px;height:20px}
+@media(max-width:759px){
+  .menu-toggle{display:inline-flex}
+  .topbar-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--topbar-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:8px 22px 16px;z-index:9}
+  .topbar-links.open{display:flex}
+  .topbar-links a{padding:12px 0;min-height:44px;display:flex;align-items:center;font-size:14px}
+}
 
 /* ── THEME TOGGLE ── */
 .theme-toggle{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:28px;height:28px;margin-left:2px;padding:0;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--ink2);cursor:pointer;transition:color .15s,border-color .15s,background .15s}
@@ -78,7 +109,7 @@ section{scroll-margin-top:72px}
 .theme-toggle .icon-sun{display:none}
 html[data-theme="dark"] .theme-toggle .icon-moon{display:none}
 html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
-@media(max-width:560px){.theme-toggle{width:30px;height:30px}}
+@media(max-width:759px){.theme-toggle{width:44px;height:44px}.theme-toggle svg{width:18px;height:18px}}
 
 /* ── SECTION HEADS ── */
 .sec{padding:96px 0}
@@ -100,10 +131,10 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 .hero-role{font-family:var(--head);font-size:clamp(19px,2.2vw,25px);font-weight:500;color:var(--accent);letter-spacing:-.01em;margin-bottom:26px}
 .hero-desc{font-size:17.5px;line-height:1.75;color:var(--ink2);max-width:54ch;margin-bottom:38px}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
-.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:14.5px;font-weight:700;padding:13px 26px;border-radius:4px;transition:background .15s,color .15s;cursor:pointer;border:none}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:14.5px;font-weight:700;padding:13px 26px;border-radius:4px;transition:background .15s,color .15s;cursor:pointer;border:none;min-height:44px}
 .btn-primary{background:var(--accent);color:var(--on-accent)}
 .btn-primary:hover{background:var(--accent-hover)}
-.link-arrow{font-size:14.5px;font-weight:500;color:var(--ink2);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--border);transition:color .15s,text-decoration-color .15s}
+.link-arrow{font-size:14.5px;font-weight:500;color:var(--ink2);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--border);transition:color .15s,text-decoration-color .15s;min-height:44px;display:inline-flex;align-items:center}
 .link-arrow:hover{color:var(--accent);text-decoration-color:var(--accent)}
 
 .hero-side{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
@@ -123,12 +154,21 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 .award-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
 @media(min-width:720px){.award-grid{grid-template-columns:minmax(0,1fr) 260px;gap:36px 64px}}
 .award-side{display:flex;flex-direction:column;gap:12px;max-width:270px;margin:0 auto}
-.award-poster{display:block}
+.award-poster{border:none;background:transparent;padding:0;margin:0;cursor:pointer;appearance:none;-webkit-appearance:none;align-self:center}
 .award-poster img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:3px;transition:border-color .15s}
 .award-poster:hover img{border-color:var(--award)}
 .award-cap{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink3);line-height:1.65}
 .award-ig{display:inline-block;margin-top:16px;font-size:15px;font-weight:500;color:var(--accent);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--accent-tint);transition:text-decoration-color .15s}
 .award-ig:hover{text-decoration-color:var(--accent)}
+@media screen {
+  .hero-award .award-side .award-poster img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 240px;
+  }
+}
 @media(max-width:560px){.hero{padding-top:56px}.hero-award{margin-top:44px;padding-bottom:40px}.hero-photo{width:100%;max-width:320px}}
 
 /* ── PROJECTS ── */
@@ -141,6 +181,10 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 .badge{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.05em;padding:5px 11px;border-radius:3px;white-space:nowrap;border:1px solid}
 .b-win{color:var(--award);border-color:var(--award-border);background:var(--award-tint)}
 .b-live{color:var(--live);border-color:var(--live-border);background:var(--live-tint)}
+.b-progress{color:var(--ink2);border-color:var(--border);background:var(--surface-2)}
+.case-gallery{margin:18px 0 8px}
+.case-gallery img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:3px}
+.case-gallery figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--ink3);margin-top:6px;line-height:1.5}
 .panel-lead{font-size:17.5px;line-height:1.7;color:var(--ink2);max-width:66ch;margin-bottom:34px}
 .panel-cols{display:grid;grid-template-columns:1fr;gap:28px;margin-bottom:28px}
 @media(min-width:760px){.panel-cols{grid-template-columns:1fr 1fr;gap:32px 44px}}
@@ -150,7 +194,7 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:30px}
 .stat{padding:18px 6px 16px;border-right:1px solid var(--border-soft)}
 .stat:last-child{border-right:none}
-.stat-n{font-family:var(--head);font-size:clamp(24px,2.6vw,30px);font-weight:700;color:var(--accent);letter-spacing:-.02em;line-height:1.1}
+.stat-n{font-family:var(--head);font-size:clamp(20px,2.4vw,26px);font-weight:700;color:var(--accent);letter-spacing:-.02em;line-height:1.1}
 .stat-l{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:5px}
 .panel-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px 28px}
 .tags{display:flex;flex-wrap:wrap;gap:7px}
@@ -158,12 +202,25 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 .panel-links{display:flex;flex-wrap:wrap;gap:10px 26px}
 .plink{font-size:14px;font-weight:500;color:var(--accent);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--accent-tint);transition:text-decoration-color .15s}
 .plink:hover{text-decoration-color:var(--accent)}
+.note-inline{font-size:13px;color:var(--ink3);font-style:italic}
 @media(max-width:560px){
   .panel{padding:30px 22px 28px}
   .panel-head{flex-wrap:wrap;gap:10px 16px}
   .badges{margin-left:0;width:100%}
   .stat{padding:14px 4px 12px}
 }
+
+/* ── CASE DETAILS ── */
+.case-details{margin:0 0 28px;border-top:1px solid var(--border-soft);padding-top:18px}
+.case-details summary{cursor:pointer;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);list-style:none}
+.case-details summary::-webkit-details-marker{display:none}
+.case-details summary::before{content:'▸ ';color:var(--accent)}
+.case-details[open] summary::before{content:'▾ '}
+.case-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+@media(min-width:760px){.case-grid{grid-template-columns:1fr 1fr;gap:20px 32px}}
+.case-grid p{font-size:14.5px;line-height:1.7;color:var(--ink2);max-width:60ch}
+.case-grid .full-width{grid-column:1 / -1}
+.case-details .tags{margin-top:16px}
 
 /* ── WORKFLOW ── */
 .band{background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -177,7 +234,8 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 @media(max-width:520px){.flow-n{font-size:30px}}
 
 /* ── EXPERIENCE ── */
-.xp-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.xp-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:28px}
+.xp-grid:last-child{margin-bottom:0}
 @media(min-width:820px){.xp-grid{grid-template-columns:220px 1fr;gap:64px}}
 .xp-aside{display:flex;flex-direction:row;gap:20px;align-items:baseline}
 @media(min-width:820px){.xp-aside{flex-direction:column;gap:6px}}
@@ -199,11 +257,6 @@ html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 .skill-list li{font-size:15px;color:var(--ink2);line-height:1.5;padding:12px 0;border-bottom:1px solid var(--border-soft)}
 .skill-list li:last-child{border-bottom:none}
 
-/* ── FOCUS ── */
-.focus-row{display:flex;flex-wrap:wrap;gap:16px 44px}
-.focus-item{display:flex;align-items:center;gap:11px;font-size:14.5px;color:var(--ink3)}
-.focus-dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink3);opacity:.65;flex-shrink:0}
-
 /* ── CONTACT ── */
 .contact-block{max-width:660px}
 .contact-statement{font-size:clamp(34px,4.6vw,52px);font-weight:600;letter-spacing:-.025em;line-height:1.1;margin-bottom:16px}
@@ -223,20 +276,79 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
 }
 
 @media print{
-  html,body{background:#fff !important;color:#000 !important}
-  .topbar,.theme-toggle,.hero-cta .link-arrow,.hero-cta .btn[download],.award-ig,.plink,.contact-links a{display:none !important}
-  .hero{display:block;padding:0}
-  .hero-side{display:none}
+  @page{margin:11mm}
+  html,body{background:#fff !important;color:#000 !important;font-size:10.5pt !important;line-height:1.5 !important;margin:0 !important;padding:0 !important}
+  .topbar,.theme-toggle,.menu-toggle,.hero-cta,.hero-side,.band,.footer{display:none !important}
+  .hero{display:block;padding:0;margin-bottom:14px}
   .hero-main{width:100%}
-  .hero-award{page-break-inside:avoid}
-  .panel{break-inside:avoid;page-break-inside:avoid;background:#fff;border-color:#ccc}
-  .flow-step{break-inside:avoid;page-break-inside:avoid}
-  .sec{padding:24px 0}
-  a{color:#000;text-decoration:underline}
+  .hero h1{font-size:25pt !important;line-height:1 !important;margin-bottom:5px !important}
+  .hero-role{font-size:11pt !important;margin-bottom:5px !important;color:#1C5138 !important}
+  .hero-desc{font-size:10pt !important;margin-bottom:8px !important}
+  .hero-award{margin-top:12px !important;page-break-inside:avoid !important;border:1px solid #CBB78A;background:#EFE7D2;padding:8px 10px}
+  .award-line{font-size:10pt !important}
+  .award-meta{font-size:8.5pt !important}
+  .award-ig{display:inline-block !important;font-size:9pt !important;color:#1C5138 !important;text-decoration:underline}
+  .award-grid{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start}
+  .award-side{flex:0 0 128px;break-inside:avoid !important}
+  .award-poster{display:block !important;width:100%;border:none;background:transparent;padding:0}
+  .award-poster img{display:block;width:100%;height:auto}
+  .award-cap{font-size:8pt !important;margin-top:4px !important}
+  .sec{padding:0 !important;margin-bottom:14px !important}
+  .sec-head{margin-bottom:8px !important;break-after:avoid !important}
+  .sec-head h2{font-size:14pt !important;white-space:normal !important;break-after:avoid !important}
+  .sec-intro{margin:-2px 0 8px !important;font-size:9pt !important}
+  .panel{background:#fff !important;border:1px solid #aaa !important;border-radius:0;padding:8px 10px !important;margin-bottom:12px !important;page-break-inside:auto}
+  #projects > .wrap > article.panel:nth-of-type(2){break-before:page !important}
+  .panel-head{break-after:avoid !important;margin-bottom:6px !important;gap:8px !important}
+  .panel-head h3{font-size:11.5pt !important}
+  .panel-lead{font-size:9.5pt !important;margin-bottom:6px !important}
+  .panel-cols{gap:6px 14px !important;margin-bottom:6px !important}
+  .panel-cols p,.case-grid p{font-size:9pt !important;line-height:1.45 !important}
+  .meta-label{margin-bottom:3px !important;font-size:8.5pt !important}
+  .case-details{margin:0 0 8px !important;padding-top:6px !important}
+  .case-details summary{font-size:9pt !important}
+  .case-grid{gap:6px 12px !important;margin-top:6px !important;break-inside:avoid !important}
+  .case-grid .full-width{grid-column:1/-1}
+  .case-gallery{break-inside:avoid !important;margin:8px 0 6px !important}
+  .case-gallery img{max-height:175px !important;width:auto !important;max-width:100% !important;border:1px solid #888 !important}
+  .case-gallery figcaption{font-size:8pt !important;margin-top:4px !important}
+  .stats{break-inside:avoid !important;margin-bottom:8px !important}
+  .stat{padding:5px 4px !important}
+  .stat-n{font-size:11pt !important}
+  .stat-l{font-size:7.5pt !important}
+  .panel-foot{break-inside:avoid !important;gap:6px 10px !important;margin-top:6px !important}
+  .tag{font-size:8pt !important;padding:2px 5px !important}
+  .plink,.contact-links a{font-size:9.5pt !important;display:inline !important}
+  .xp-grid{gap:6px !important;margin-bottom:10px !important;break-inside:avoid !important}
+  .xp-aside{gap:4px !important}
+  .xp-body h3{font-size:11pt !important;margin-bottom:3px !important}
+  .xp-list{gap:2px !important;margin-bottom:6px !important}
+  .xp-list li{font-size:9pt !important;line-height:1.4 !important}
+  .contact-block{break-inside:avoid !important;margin-bottom:10px}
+  .contact-statement{font-size:13pt !important;margin-bottom:3px !important}
+  .contact-sub{font-size:8.5pt !important;margin-bottom:5px !important}
+  .contact-links{font-size:8.5pt !important;white-space:normal}
+  .contact-links a,.contact-sep{white-space:nowrap}
+  .skill-cols{gap:8px !important}
+  .skill-col{break-inside:avoid !important}
+  .skill-col-head{font-size:9pt !important;margin-bottom:3px !important}
+  .skill-list li{font-size:8.5pt !important;padding:1.5px 0 !important}
+  footer{padding:6px 0 8px !important}
+  footer .wrap{font-size:8pt !important}
+  a{color:#000 !important;text-decoration:underline}
+  .contact-links a,.plink{display:inline !important}
+  details, details > *{display:block !important}
+  details > summary{display:block !important}
   img{max-width:100% !important;height:auto}
 }
 </style>
+<script>
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) { d.open = true; });
+  });
+</script>
 <script src="theme.js"></script>
+<script src="nav.js" defer></script>
 </head>
 <body>
 
@@ -245,18 +357,23 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
 <nav class="topbar" aria-label="Primary">
   <div class="wrap">
     <span class="topbar-name">Syed Adeel Waseem</span>
-    <div class="topbar-links">
-      <a href="#projects">Projects</a>
-      <a href="#workflow">Workflow</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#training">Training</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/syed-adeel872" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <div class="topbar-actions">
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       </button>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="primary-menu" class="topbar-links">
+      <a href="#projects">Projects</a>
+      <a href="#workflow">How I Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#training">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/syed-adeel872" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
 </nav>
@@ -268,16 +385,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
     <div class="wrap">
       <header class="hero">
         <div class="hero-main">
-          <p class="hero-eyebrow">Agentic AI Developer</p>
+          <p class="hero-eyebrow">AI Automation Engineer | Agentic AI Developer</p>
           <h1>Syed Adeel<br>Waseem</h1>
-          <p class="hero-role">Agentic AI Developer | AI Automation &amp; RAG</p>
+          <p class="hero-role">AI Automation Engineer | Agentic AI Developer</p>
           <p class="hero-desc">
-            I build AI-powered applications and business workflows using LLMs, retrieval systems, and structured AI-assisted development — specifying the intent, guiding implementation, and verifying the results at every step.
+            I build AI systems that do real work. I turn business workflows into practical AI applications and automations by connecting LLMs, APIs, and software systems with structured testing and verification.
           </p>
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">View projects</a>
-            <a href="#contact" class="link-arrow">Get in touch →</a>
-            <a href="assets/syed-adeel-waseem-portfolio.pdf" class="btn" download>Download Full Portfolio (PDF)</a>
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="link-arrow">Contact Me →</a>
+            <a href="assets/syed-adeel-waseem-portfolio.pdf" class="btn" download>Download Portfolio (PDF)</a>
           </div>
         </div>
         <div class="hero-side">
@@ -285,7 +402,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
           <figure class="hero-photo">
             <img src="assets/profile.jpg" alt="Professional portrait of Adeel Waseem" width="1600" height="1600">
           </figure>
-          <p class="hero-meta">Islamabad, Pakistan<br>2 live systems · 1 hackathon win</p>
+          <p class="hero-meta">Islamabad, Pakistan</p>
         </div>
       </header>
 
@@ -294,15 +411,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
           <div class="award-text">
             <p class="award-line">
               <span class="award-mark" aria-hidden="true">★</span>
-              <strong>1st Place — AI Seerathon 2026</strong>
-              <span class="award-meta">Organized by Seerat Ki Duniya · Results: September 10, 2026 · Featured on official social media</span>
+              <strong>Winner — AI-Chatbot, AI Seerathon 2026</strong>
+              <span class="award-meta">Organized by Seerat Ki Duniya · Winners announced September 10, 2026 · Selected as winner among approximately 15–17 participants</span>
             </p>
             <a class="award-ig" href="https://www.instagram.com/p/DdHenu_kbxJ/" target="_blank" rel="noopener noreferrer">Official announcement on Instagram ↗</a>
           </div>
           <figure class="award-side">
-            <a class="award-poster" href="assets/hakathon%20winner%20poster.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size AI Seerathon 2026 winner poster">
+            <button type="button" class="award-poster" aria-label="Open full-size AI Seerathon 2026 winner poster" onclick="window.open('assets/hakathon winner poster.jpeg', '_blank')">
               <img src="assets/hakathon%20winner%20poster.jpeg" alt="Official AI Seerathon 2026 winner poster announcing Adeel Waseem as winner in the AI Chatbot category" width="1280" height="1600">
-            </a>
+            </button>
             <figcaption class="award-cap">Official winner announcement — AI Chatbot category</figcaption>
           </figure>
         </div>
@@ -315,7 +432,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-idx" aria-hidden="true">01 /</span>
-        <h2 id="projects-heading">Selected work</h2>
+        <h2 id="projects-heading">Selected Work</h2>
         <span class="sec-rule" aria-hidden="true"></span>
       </div>
 
@@ -325,29 +442,62 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
           <span class="panel-idx" aria-hidden="true">01</span>
           <h3>Seerah QA Bot</h3>
           <div class="badges">
-            <span class="badge b-win">★ Hackathon Winner</span>
+            <span class="badge b-win">★ Winner</span>
             <span class="badge b-live">Live</span>
           </div>
         </header>
-        <p class="panel-lead">Questions about the Seerah need answers grounded in authenticated sources — generic LLM responses can be unsourced or drift into out-of-scope religious rulings.</p>
+        <p class="panel-lead">A source-grounded conversational assistant for verified Seerah and Shamail content. It answers in-context questions, refuses out-of-scope fatwa requests by code, and cites corpus entries instead of trusting model output.</p>
         <div class="panel-cols">
           <div>
-            <h4 class="meta-label">Approach</h4>
-            <p>Hybrid retrieval over a curated Seerah corpus: BM25 keyword search combined with semantic search, with citation validation enforced in code rather than prompts.</p>
+            <h4 class="meta-label">Problem</h4>
+            <p>Generic LLM answers about the Seerah can be unsourced, hallucinated, or drift into religious rulings. Users need verified, citable answers with explicit safety boundaries.</p>
           </div>
           <div>
-            <h4 class="meta-label">Details</h4>
-            <p>Pre-retrieval blocking of out-of-scope religious rulings; trilingual queries (English, Urdu, Roman Urdu); a baked-in corpus fallback so answers keep working when external APIs are unavailable.</p>
+            <h4 class="meta-label">What was built</h4>
+            <p>A Next.js application with hybrid retrieval, grounding gates, language-specific prompting, three-check citation validation, pre-retrieval fatwa blockers, post-LLM refusal inspection, and a baked corpus fallback.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Retrieval</h4>
+            <p>Hybrid BM25 plus semantic cosine retrieval over a 174-entry corpus. Pass 1 uses the original query; candidates are merged and filtered by coverage, BM25, and semantic thresholds.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Safety</h4>
+            <p>34+ deterministic fatwa blockers and 19 prompt-injection patterns run before retrieval or generation. 26 post-LLM refusal patterns catch lazy fallbacks and prompt leakage; citations are stripped when refused.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Fallback</h4>
+            <p>A 174-entry baked corpus snapshot (120 Shamail, 34 timeline, 20 courses) supports core answers when the live API is unavailable. Precomputed embeddings support semantic search when configured.</p>
           </div>
         </div>
-        <div class="panel-demonstrates">
-          <h4 class="meta-label">Demonstrates</h4>
-          <p>A source-grounded QA system with deterministic safety and citation checks — 1st place at AI Seerathon 2026.</p>
-        </div>
-<div class="stats">
+        <figure class="case-gallery">
+          <img src="assets/seerah-chat-interface.png" alt="Seerah QA Bot conversational interface screenshot" loading="lazy" width="1366" height="641">
+          <figcaption>Seerah QA Bot — conversational interface</figcaption>
+        </figure>
+        <figure class="case-gallery">
+          <img src="assets/seerah-answer-screen.png" alt="Seerah QA Bot answer with source references and supporting English and Urdu text" loading="lazy" width="1366" height="642">
+          <figcaption>Source references with supporting English and Urdu text</figcaption>
+        </figure>
+        <details class="case-details">
+          <summary>Technical implementation details</summary>
+          <div class="case-grid">
+            <div>
+              <h4 class="meta-label">Citation validation</h4>
+              <p>Three-check validation: corpus entry exists, has body text, and matches answer language. Citations come from retrieval, not model output. Coverage threshold ≥ 0.5, BM25 ≥ 8, semantic score ≥ 0.62.</p>
+            </div>
+            <div>
+              <h4 class="meta-label">Frontend gating</h4>
+              <p>Source chips and share controls are shown only for responses with status `answered` and citations. Non-answer states cannot display citations.</p>
+            </div>
+            <div class="full-width">
+              <h4 class="meta-label">Limitations</h4>
+              <p>Semantic search depends on Gemini API availability; LLM synthesis requires valid API credentials.</p>
+            </div>
+          </div>
+        </details>
+        <div class="stats">
           <div class="stat"><div class="stat-n">3</div><div class="stat-l">Languages</div></div>
           <div class="stat"><div class="stat-n">2&times;</div><div class="stat-l">Search modes</div></div>
-          <div class="stat"><div class="stat-n">Code-enforced</div><div class="stat-l">Citation validation</div></div>
+          <div class="stat"><div class="stat-n">174</div><div class="stat-l">Corpus entries</div></div>
         </div>
         <footer class="panel-foot">
           <ul class="tags">
@@ -372,28 +522,66 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
           <span class="panel-idx" aria-hidden="true">02</span>
           <h3>HVAC Revenue Recovery System</h3>
           <div class="badges">
-            <span class="badge b-live">Live demo</span>
+            <span class="badge b-case">Case study</span>
+            <span class="badge b-progress">In Progress — Active Development</span>
           </div>
         </header>
-        <p class="panel-lead">HVAC contractors lose potential revenue when customer estimates go unbooked and past leads go dormant — manual follow-up is inconsistent and easy to forget.</p>
+        <p class="panel-lead">A safety-gated recovery pipeline for HVAC revenue leaks: signed webhooks identify unbooked estimates and dormant leads, workers classify and draft outreach, and human approval controls customer-facing execution.</p>
         <div class="panel-cols">
           <div>
-            <h4 class="meta-label">Approach</h4>
-            <p>A multi-tenant SaaS-style workflow that surfaces dormant leads and unbooked estimates, drafts AI-generated SMS outreach, and routes every message through human approval before sending.</p>
+            <h4 class="meta-label">Problem</h4>
+            <p>HVAC contractors lose track of sent-but-unbooked estimates and cold leads. Manual follow-up is inconsistent, and automated outreach risks consent, compliance, and customer-trust failures.</p>
           </div>
           <div>
-            <h4 class="meta-label">Details</h4>
-            <p>HMAC-SHA256 webhook verification, Supabase Row Level Security, append-only audit logging, and circuit breakers that fail closed. Integrations with ServiceTitan and Twilio. Automated test suite; 22 SQL migrations.</p>
+            <h4 class="meta-label">What was built</h4>
+            <p>A multi-tenant Next.js application with four workers, RLS-isolated PostgreSQL data, HMAC webhook verification, replay protection, idempotency, risk classification, approval workflows, rate limiting, circuit breakers, and audit logging.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Workflow</h4>
+            <p>CRM/Webhook → Validation → Intelligence → Recovery → Safety → Human Approval → Execution → Audit.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Safety</h4>
+            <p>Deterministic consent, opt-out, client policy, and kill-switch checks return ALLOW, BLOCK, or ESCALATE. Yellow-risk customer-facing actions require approval before execution.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Integrations</h4>
+            <p>ServiceTitan and Twilio adapters, Zod validation, Supabase Auth, PostgreSQL with 22 migrations, and an operations dashboard for command, pipeline, safety, opportunities, tenants, integrations, and audit views.</p>
+          </div>
+          <div>
+            <h4 class="meta-label">Limitations</h4>
+            <p>Technical case study under active development. No customer deployment, recovered revenue, ROI, or measured business outcomes are claimed.</p>
           </div>
         </div>
-        <div class="panel-demonstrates">
-          <h4 class="meta-label">Demonstrates</h4>
-          <p>Production-style safeguards around LLM-generated customer outreach: human-in-the-loop control, tenant isolation, and auditable messaging — delivered through structured AI-assisted development.</p>
-        </div>
+        <figure class="case-gallery">
+          <img src="assets/hvac-dashboard.png" alt="HVAC Revenue Recovery operations dashboard screenshot" loading="lazy" width="808" height="387">
+          <figcaption>HVAC Revenue Recovery — operations dashboard</figcaption>
+        </figure>
+        <details class="case-details">
+          <summary>Technical implementation details</summary>
+          <div class="case-grid">
+            <div>
+              <h4 class="meta-label">Four workers</h4>
+              <p>Intelligence scores opportunities and recommends strategy; Recovery drafts messages and classifies replies; Safety &amp; Policy enforces consent, opt-out, policy, and kill switch; Operations records metrics, anomalies, and cost.</p>
+            </div>
+            <div>
+              <h4 class="meta-label">Webhook security</h4>
+              <p>HMAC signature verification, replay protection, five-minute timestamp window, 1 MB payload cap, and idempotency keys. LLM output is schema-validated with Zod and never trusted blindly.</p>
+            </div>
+            <div>
+              <h4 class="meta-label">Risk and execution</h4>
+              <p>GREEN / YELLOW / RED classification with human approval for yellow-risk actions. Execution uses rate limiting, circuit breakers, and an outbound queue to Twilio or a mock adapter.</p>
+            </div>
+            <div>
+              <h4 class="meta-label">Evidence</h4>
+              <p>README-reported: 640 tests across 52 files and 22 database migrations. These are reported evidence, not independently verified results.</p>
+            </div>
+          </div>
+        </details>
         <div class="stats">
-          <div class="stat"><div class="stat-n">22</div><div class="stat-l">SQL migrations</div></div>
-          <div class="stat"><div class="stat-n">767</div><div class="stat-l">Line architecture doc</div></div>
-          <div class="stat"><div class="stat-n">Tests</div><div class="stat-l">Automated suite</div></div>
+          <div class="stat"><div class="stat-n">4</div><div class="stat-l">Workers</div></div>
+          <div class="stat"><div class="stat-n">RLS</div><div class="stat-l">Tenant isolation</div></div>
+          <div class="stat"><div class="stat-n">HITL</div><div class="stat-l">Approval flow</div></div>
         </div>
         <footer class="panel-foot">
           <ul class="tags">
@@ -405,7 +593,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
             <li class="tag">OpenAI-compatible LLM</li>
           </ul>
           <div class="panel-links">
-            <a href="https://hvac-revenue-recovery-nine.vercel.app" target="_blank" rel="noopener noreferrer" class="plink">Live demo ↗</a>
             <a href="https://github.com/syed-adeel872/hvac-revenue-recovery" target="_blank" rel="noopener noreferrer" class="plink">GitHub repository ↗</a>
           </div>
         </footer>
@@ -413,70 +600,42 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
     </div>
   </section>
 
-  <!-- WORKFLOW -->
+  <!-- HOW I WORK -->
   <section id="workflow" class="sec band" aria-labelledby="workflow-heading">
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-idx" aria-hidden="true">02 /</span>
-        <h2 id="workflow-heading">How I Build AI-Powered Products</h2>
+        <h2 id="workflow-heading">How I Work</h2>
         <span class="sec-rule" aria-hidden="true"></span>
       </div>
-      <p class="sec-intro">My work is not "open a tool and write a prompt." Each project follows a disciplined path from problem to verified delivery.</p>
+      <p class="sec-intro">Each project follows a disciplined path from problem to verified delivery.</p>
       <ol class="flow-grid">
         <li class="flow-step">
           <span class="flow-n" aria-hidden="true">01</span>
           <div class="flow-body">
-            <h3>Understand the problem</h3>
-            <p>Clarify the user or business need before touching any tools.</p>
+            <h3>Understand the problem and requirements</h3>
+            <p>Clarify the user or business need and define scope, constraints, and acceptance criteria.</p>
           </div>
         </li>
         <li class="flow-step">
           <span class="flow-n" aria-hidden="true">02</span>
           <div class="flow-body">
-            <h3>Define requirements</h3>
-            <p>Turn the need into scope, constraints, and acceptance criteria.</p>
+            <h3>Design the workflow and system architecture</h3>
+            <p>Work through data flow, APIs, integrations, and technical trade-offs.</p>
           </div>
         </li>
         <li class="flow-step">
           <span class="flow-n" aria-hidden="true">03</span>
           <div class="flow-body">
-            <h3>Break it down</h3>
-            <p>Split the system into manageable components with clear boundaries.</p>
+            <h3>Implement integrations and application logic</h3>
+            <p>Build the system with structured specs that drive AI-assisted coding with precise intent.</p>
           </div>
         </li>
         <li class="flow-step">
           <span class="flow-n" aria-hidden="true">04</span>
           <div class="flow-body">
-            <h3>Reason about architecture</h3>
-            <p>Work through data flow, APIs, integrations, and technical trade-offs.</p>
-          </div>
-        </li>
-        <li class="flow-step">
-          <span class="flow-n" aria-hidden="true">05</span>
-          <div class="flow-body">
-            <h3>Specify and guide implementation</h3>
-            <p>Write structured specs that drive AI-assisted coding with precise intent.</p>
-          </div>
-        </li>
-        <li class="flow-step">
-          <span class="flow-n" aria-hidden="true">06</span>
-          <div class="flow-body">
-            <h3>Review the output</h3>
-            <p>Check every result against the requirements and expected behaviour.</p>
-          </div>
-        </li>
-        <li class="flow-step">
-          <span class="flow-n" aria-hidden="true">07</span>
-          <div class="flow-body">
-            <h3>Test and iterate</h3>
-            <p>Run tests, trace errors to root causes, and fix systematically.</p>
-          </div>
-        </li>
-        <li class="flow-step">
-          <span class="flow-n" aria-hidden="true">08</span>
-          <div class="flow-body">
-            <h3>Validate before shipping</h3>
-            <p>Verify functionality, security, reliability, and safety — then consider it done.</p>
+            <h3>Test, verify, document, and prepare for delivery</h3>
+            <p>Run tests, trace errors to root causes, verify functionality and safety, then consider it done.</p>
           </div>
         </li>
       </ol>
@@ -488,24 +647,122 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-idx" aria-hidden="true">03 /</span>
-        <h2 id="experience-heading">Additional Professional Experience</h2>
+        <h2 id="experience-heading">Experience</h2>
         <span class="sec-rule" aria-hidden="true"></span>
       </div>
       <div class="xp-grid">
         <aside class="xp-aside">
-          <span class="xp-label">Background</span>
-          <span class="xp-dur">≈ 2.5–3 years</span>
+          <span class="xp-label">Previous employment</span>
+          <span class="xp-dur">Karachi, Pakistan · Approximately 2–2.5 years</span>
         </aside>
         <div class="xp-body">
-          <h3>Lead Generation &amp; Email Outreach</h3>
-          <p class="xp-sub">Prospect research, data management, and cold outreach</p>
+          <h3>Lead Generation &amp; Email Marketing</h3>
           <ul class="xp-list">
-            <li>Lead research and contact-data extraction</li>
-            <li>Organising and managing prospect data in Google Sheets</li>
-            <li>Cold-email outreach and prospect-list management</li>
-            <li>Maintaining an organised end-to-end lead-generation workflow</li>
+            <li>Manual lead generation</li>
+            <li>Prospect research</li>
+            <li>Google Sheets lead management</li>
+            <li>Email marketing and outreach</li>
           </ul>
-          <p class="xp-note">Historical activity levels: approximately 100–150 leads researched per day and 50–150 cold emails per day — past workload, not guaranteed results.</p>
+        </div>
+      </div>
+      <div class="xp-grid">
+        <aside class="xp-aside">
+          <span class="xp-label">Founder</span>
+        </aside>
+        <div class="xp-body">
+          <h3>Founder — Aivon Intelligence</h3>
+          <ul class="xp-list">
+            <li>Founded and coordinated a five-person core team: the founder, one social media manager, and three website/AI developers.</li>
+            <li>Graphic designers and video editors were hired separately when required.</li>
+            <li>Actual client work delivered was primarily graphic design and video editing.</li>
+            <li>The venture is now inactive.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-grid">
+        <aside class="xp-aside">
+          <span class="xp-label">Intern</span>
+          <span class="xp-dur">Remote · 2026</span>
+        </aside>
+        <div class="xp-body">
+          <h3>AI Automation Engineer Intern — Think AI Works</h3>
+          <ul class="xp-list">
+            <li>Completed five practical projects: TranslateDocs, Meeting Prep, Study Buddy, Whale Alert, and RecallRadar, covering document translation, meeting preparation, study assistance, blockchain alerts, and clinic recall/campaign workflows.</li>
+            <li>Validated application behavior through testing, documentation, and demonstrations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="sec" aria-labelledby="skills-heading">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-idx" aria-hidden="true">04 /</span>
+        <h2 id="skills-heading">Technical Skills</h2>
+        <span class="sec-rule" aria-hidden="true"></span>
+      </div>
+      <p class="sec-intro">Technologies and methods I have used in the projects above.</p>
+      <div class="skill-cols">
+        <div class="skill-col">
+          <h3 class="skill-col-head">AI &amp; LLM Applications </h3>
+          <ul class="skill-list">
+            <li>LLM integration</li>
+            <li>Prompt engineering</li>
+            <li>Gemini API</li>
+            <li>OpenAI-compatible LLMs</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-head">Retrieval &amp; RAG </h3>
+          <ul class="skill-list">
+            <li>RAG pipeline design</li>
+            <li>Hybrid retrieval (BM25 + semantic)</li>
+            <li>Citation validation &amp; grounding</li>
+            <li>Embeddings</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-head">Automation &amp; Agent Workflows </h3>
+          <ul class="skill-list">
+            <li>Human-in-the-loop workflows</li>
+            <li>Multi-tenant architecture</li>
+            <li>Workflow design</li>
+            <li>Circuit breakers</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-head">Backend &amp; APIs </h3>
+          <ul class="skill-list">
+            <li>Next.js</li>
+            <li>API routes</li>
+            <li>HMAC webhook verification</li>
+            <li>Supabase</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-head">Frontend Development </h3>
+          <ul class="skill-list">
+            <li>HTML &amp; CSS</li>
+            <li>TypeScript</li>
+            <li>Responsive design</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-head">Databases &amp; Integrations </h3>
+          <ul class="skill-list">
+            <li>PostgreSQL</li>
+            <li>Row Level Security</li>
+            <li>ServiceTitan</li>
+            <li>Twilio</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-head">Testing &amp; Evaluation </h3>
+          <ul class="skill-list">
+            <li>Automated testing</li>
+            <li>AI output evaluation</li>
+            <li>Structured verification</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -515,8 +772,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
   <section id="training" class="sec" aria-labelledby="training-heading">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-idx" aria-hidden="true">04 /</span>
-        <h2 id="training-heading">Education & Training</h2>
+        <span class="sec-idx" aria-hidden="true">05 /</span>
+        <h2 id="training-heading">Education &amp; Training</h2>
         <span class="sec-rule" aria-hidden="true"></span>
       </div>
       <div class="panel" style="max-width:720px">
@@ -527,11 +784,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
             <span class="badge" style="background:var(--accent-tint);color:var(--accent);border-color:var(--accent)">In Progress</span>
           </div>
         </header>
-        <p class="panel-lead">Panaversity &mdash; <em>The AI Agent Factory</em> learning program. Overall status: In Progress (2026).</p>
+        <p class="panel-lead">Panaversity — <em>The AI Agent Factory</em> learning program. Overall status: In Progress (2026).</p>
         <div class="panel-cols">
           <div>
             <h4 class="meta-label">Foundations</h4>
-            <p>Completed all 10 courses covering AI prompting, specification-driven and AI-assisted development, workflow design and diagnosis, skills and connectors, governance and responsible AI, and open-source LLMs.</p>
+            <p>Completed all 10 modules covering AI prompting, specification-driven and AI-assisted development, workflow design and diagnosis, skills and connectors, governance and responsible AI, and open-source LLMs.</p>
           </div>
           <div>
             <h4 class="meta-label">General Agents</h4>
@@ -540,64 +797,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
         </div>
         <p class="xp-note" style="margin-top:24px"><strong>Note:</strong> Coursework in progress; this does not represent a completed degree, certification, or university accreditation.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="sec" aria-labelledby="skills-heading">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="sec-idx" aria-hidden="true">05 /</span>
-        <h2 id="skills-heading">Hands-On Skills</h2>
-        <span class="sec-rule" aria-hidden="true"></span>
-      </div>
-      <p class="sec-intro">Technologies and methods I have used in the projects above.</p>
-      <div class="skill-cols">
-        <div class="skill-col">
-          <h3 class="skill-col-head">Retrieval &amp; RAG <span class="skill-count">04</span></h3>
-          <ul class="skill-list">
-            <li>RAG pipeline design</li>
-            <li>Hybrid retrieval (BM25 + semantic)</li>
-            <li>Citation validation &amp; grounding</li>
-            <li>Gemini API (LLM + embeddings)</li>
-          </ul>
-        </div>
-        <div class="skill-col">
-          <h3 class="skill-col-head">AI Safety &amp; Workflows <span class="skill-count">03</span></h3>
-          <ul class="skill-list">
-            <li>AI safety guardrails</li>
-            <li>Human-in-the-loop workflows</li>
-            <li>Multi-tenant architecture</li>
-          </ul>
-        </div>
-        <div class="skill-col">
-          <h3 class="skill-col-head">Engineering <span class="skill-count">04</span></h3>
-          <ul class="skill-list">
-            <li>Next.js &amp; TypeScript</li>
-            <li>Supabase / PostgreSQL (RLS)</li>
-            <li>Vercel deployment</li>
-            <li>Spec-driven AI-assisted development</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CURRENT FOCUS -->
-  <section id="focus" class="sec" aria-labelledby="focus-heading">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="sec-idx" aria-hidden="true">06 /</span>
-        <h2 id="focus-heading">Current Technical Focus</h2>
-        <span class="sec-rule" aria-hidden="true"></span>
-      </div>
-      <p class="sec-intro">Areas I am actively studying and improving — not yet production-grade skills.</p>
-      <ul class="focus-row">
-        <li class="focus-item"><span class="focus-dot" aria-hidden="true"></span>Agentic workflows and orchestration</li>
-        <li class="focus-item"><span class="focus-dot" aria-hidden="true"></span>AI output evaluation and validation</li>
-        <li class="focus-item"><span class="focus-dot" aria-hidden="true"></span>Reliable AI systems and safety</li>
-        <li class="focus-item"><span class="focus-dot" aria-hidden="true"></span>Structured AI-assisted software development</li>
-      </ul>
+      <p class="sec-intro" style="margin-top:24px">Formal education: Matriculation is the highest completed formal qualification. No further formal education is claimed.</p>
     </div>
   </section>
 
@@ -605,7 +805,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
   <section id="contact" class="sec" aria-labelledby="contact-heading">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-idx" aria-hidden="true">07 /</span>
+        <span class="sec-idx" aria-hidden="true">06 /</span>
         <h2 id="contact-heading">Contact</h2>
         <span class="sec-rule" aria-hidden="true"></span>
       </div>
@@ -625,13 +825,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;f
     </div>
   </section>
 
-  <footer>
-    <div class="wrap">
-      <span>Built by Syed Adeel Waseem</span>
-      <span>Islamabad, Pakistan · 2026</span>
-    </div>
-  </footer>
-
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>Built by Syed Adeel Waseem</span>
+    <span>Islamabad, Pakistan · 2026</span>
+  </div>
+</footer>
+
 </body>
 </html>

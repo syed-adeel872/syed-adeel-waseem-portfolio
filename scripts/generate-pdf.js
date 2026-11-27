@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const { execFileSync } = require('child_process');
 const path = require('path');
 
 (async () => {
@@ -39,6 +40,38 @@ const path = require('path');
     await page.setViewport({ width: 1200, height: 1600, deviceScaleFactor: 2 });
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
+    // Force lazy images to load for PDF generation
+    await page.evaluate(() => {
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        img.loading = 'eager';
+      });
+    });
+
+    // Wait for fonts and images to finish loading before rendering
+    await page.evaluate(() => document.fonts && document.fonts.ready);
+    try {
+      await page.waitForFunction(() => Array.from(document.images).every((img) => img.complete), { timeout: 15000 });
+    } catch (e) {
+      console.warn('Image load wait timed out; continuing:', e.message);
+    }
+
+    // Ensure document metadata is set for the PDF
+    await page.evaluate(() => {
+      document.title = 'Syed Adeel Waseem - AI Automation Engineer | Agentic AI Developer';
+      var meta = document.querySelector('meta[name="author"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', 'author');
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', 'Syed Adeel Waseem');
+    });
+
+    // Expand case-study details for print/PDF output
+    await page.evaluate(() => {
+      document.querySelectorAll('details').forEach((d) => { d.open = true; });
+    });
+
     // Emulate print media to apply @media print styles
     await page.emulateMediaType('print');
 
@@ -46,7 +79,7 @@ const path = require('path');
       path: outputPath,
       format: 'A4',
       printBackground: true,
-      margin: { top: '20mm', right: '15mm', bottom: '20mm', left: '15mm' },
+      margin: { top: '12mm', right: '12mm', bottom: '12mm', left: '12mm' },
       preferCSSPageSize: false,
       displayHeaderFooter: false
     });
@@ -57,5 +90,22 @@ const path = require('path');
     process.exit(1);
   } finally {
     await browser.close();
+  }
+
+  // Patch PDF metadata (title/author) using pypdf when available
+  try {
+    const script = [
+      'import pypdf, sys',
+      'p = sys.argv[1]',
+      'r = pypdf.PdfReader(p)',
+      'w = pypdf.PdfWriter()',
+      'for pg in r.pages: w.add_page(pg)',
+      "w.add_metadata({'/Title': 'Syed Adeel Waseem - AI Automation Engineer | Agentic AI Developer', '/Author': 'Syed Adeel Waseem'})",
+      'with open(p, "wb") as f: w.write(f)'
+    ].join('\n');
+    execFileSync('python', ['-c', script, outputPath], { stdio: 'inherit' });
+    console.log('PDF metadata patched');
+  } catch (e) {
+    console.warn('PDF metadata patch skipped:', e.message);
   }
 })();

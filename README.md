@@ -1,34 +1,35 @@
 # Syed Adeel Waseem — Portfolio
 
-Agentic AI Developer | AI Automation & RAG
+AI Automation Engineer | Agentic AI Developer
 
 ## Overview
 
-This is my professional portfolio website showcasing my work as an Agentic AI Developer specializing in AI automation, RAG systems, and LLM-powered applications.
+Professional portfolio website showcasing selected AI automation and agentic AI work.
 
 **Live Portfolio:** https://adeel-portfolio-livid.vercel.app
 
-**Download Full Portfolio (PDF):** [assets/syed-adeel-waseem-portfolio.pdf](assets/syed-adeel-waseem-portfolio.pdf) — generated from the live site, includes all sections and images.
+**Download Full Portfolio (PDF):** [assets/syed-adeel-waseem-portfolio.pdf](assets/syed-adeel-waseem-portfolio.pdf)
 
 ## Technology Stack
 
 - **HTML5** — Single-file static site (no build step)
 - **CSS3** — Custom properties, CSS Grid, Flexbox, responsive design
+- **Vanilla JavaScript** — Theme toggle with localStorage persistence (`theme.js`), mobile navigation (`nav.js`)
 - **Google Fonts** — Space Grotesk (display), DM Sans (body), JetBrains Mono (code)
-- **Vanilla JavaScript** — Lightweight theme toggle with localStorage persistence (theme.js)
 - **Vercel** — Hosting and deployment
 - **No frameworks** — No React, Vue, or build toolchain
 
 ## Key Features
 
-- **Responsive Design** — Works on desktop (1440px+) and mobile (390px) viewports
-- **Light/Dark Theme Toggle** — Persisted preference via localStorage, no flash of wrong theme
-- **Project Case Studies** — Two live production systems with verified statistics
-- **Education & Training** — Agentic AI Architecture program (Panaversity) in progress
-- **Professional Experience** — Lead generation and email outreach background
-- **Award Recognition** — 1st Place, AI Seerathon 2026 (AI Chatbot category)
+- **Responsive Design** — Mobile navigation, compact topbar, accessible controls
+- **Light/Dark Theme Toggle** — Persisted preference via localStorage
+- **Selected Work** — Seerah QA Bot (hackathon winner) and HVAC Revenue Recovery (case study)
+- **Experience** — Lead Generation & Email Marketing (previous employment), Aivon Intelligence (founder-led venture, no longer active), and AI Automation Engineer Intern (remote, 2026)
+- **Project Screenshots** — Seerah QA Bot chat and answer-reference screenshots; HVAC Revenue Recovery dashboard screenshot
+- **Education & Training** — Panaversity Agentic AI Architecture program (in progress); Matriculation
+- **Award Recognition** — Winner — AI-Chatbot, AI Seerathon 2026 (selected as winner among approximately 15–17 participants)
 - **Downloadable PDF** — Full portfolio available for offline viewing
-- **Security Hardened** — CSP headers, no external scripts, minimal attack surface
+- **Security Hardened** — CSP headers, no external scripts, deployment exclusions
 
 ## Links
 
@@ -36,7 +37,8 @@ This is my professional portfolio website showcasing my work as an Agentic AI De
 - **GitHub:** https://github.com/syed-adeel872
 - **LinkedIn:** https://www.linkedin.com/in/syedadeelwaseem/
 - **Seerah QA Bot (Live):** https://seerah-qa-bot.vercel.app
-- **HVAC Revenue Recovery (Live):** https://hvac-revenue-recovery-nine.vercel.app
+- **Seerah QA Bot (Repository):** https://github.com/syed-adeel872/seerah-qa-bot
+- **HVAC Revenue Recovery (Repository):** https://github.com/syed-adeel872/hvac-revenue-recovery
 
 ## Local Preview
 
@@ -48,11 +50,28 @@ npx serve .
 python -m http.server 8000
 ```
 
-## Featured Projects
+## PDF Generation
 
-1. **Seerah QA Bot** — Multilingual RAG system for Islamic texts with BM25 + semantic search, Gemini embeddings, citation-backed answers, trilingual support (English, Urdu, Roman Urdu)
-2. **HVAC Revenue Recovery** — AI-powered revenue recovery system with ServiceTitan integration, Twilio messaging, circuit breaker patterns, WORM audit trails, and HITL approval flows
+```bash
+npm install
+npm run generate-pdf
+```
+
+Requires Node.js and a Chrome/Chromium installation (Puppeteer resolves one automatically). The script waits for fonts and images, applies print styles, and patches PDF metadata (title and author) via Python/pypdf when available.
+
+## Deployment
+
+Hosted on Vercel. Deployment exclusions are defined in `.vercelignore` (audit report, scripts, GitHub workflows, node_modules, Vercel local files, env files). Internal files remain in the repository.
+
+## Deployment/Security Exclusions
+
+- `AUDIT_REPORT.md`
+- `scripts/`
+- `.github/`
+- `node_modules/`
+- `.vercel/`
+- `.env*`
 
 ---
 
-*Built with semantic HTML, accessible CSS, and a minimal local theme script. The PDF is generated from the live portfolio and should be regenerated whenever substantive content changes.*
+*Built with semantic HTML, accessible CSS, and minimal local scripts.*

@@ -1,3 +1,8 @@
 .vercel
 .env*
 node_modules/
+%TEMP%/
+/AUDIT_REPORT.md
+/HVAC Revenue Recovery.image.png
+/Seerah QA Bot_answer screen.image.png
+/Seerah QA Bot_chat interface.image.png
