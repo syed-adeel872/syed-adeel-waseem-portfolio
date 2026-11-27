@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-const { execFileSync } = require('child_process');
 const path = require('path');
 
 (async () => {
@@ -90,22 +89,5 @@ const path = require('path');
     process.exit(1);
   } finally {
     await browser.close();
-  }
-
-  // Patch PDF metadata (title/author) using pypdf when available
-  try {
-    const script = [
-      'import pypdf, sys',
-      'p = sys.argv[1]',
-      'r = pypdf.PdfReader(p)',
-      'w = pypdf.PdfWriter()',
-      'for pg in r.pages: w.add_page(pg)',
-      "w.add_metadata({'/Title': 'Syed Adeel Waseem - AI Automation Engineer | Agentic AI Developer', '/Author': 'Syed Adeel Waseem'})",
-      'with open(p, "wb") as f: w.write(f)'
-    ].join('\n');
-    execFileSync('python', ['-c', script, outputPath], { stdio: 'inherit' });
-    console.log('PDF metadata patched');
-  } catch (e) {
-    console.warn('PDF metadata patch skipped:', e.message);
   }
 })();
