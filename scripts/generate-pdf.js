@@ -12,7 +12,7 @@ const path = require('path');
   let executablePath = process.env.CHROME_PATH || null;
   if (!executablePath) {
     try {
-      executablePath = puppeteer.executablePath();
+      executablePath = await puppeteer.executablePath();
       if (executablePath) {
         console.log(`Using Puppeteer bundled browser: ${executablePath}`);
       }
